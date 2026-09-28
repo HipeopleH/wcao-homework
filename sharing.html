@@ -1,0 +1,2157 @@
+# share.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Shared Homework — whatcheatsareonlineHW.qd.je</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+
+            background: #0c0e0f;
+            color: #e8e8e8;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 32px;
+
+            background: #111415;
+            border-bottom: 1px solid #242829;
+        }
+
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+
+            letter-spacing: -0.6px;
+        }
+
+
+        .logo .cheats {
+            color: #35d16f;
+        }
+
+
+        .logo .online {
+            color: #ff4545;
+        }
+
+
+        .logo .hw {
+            color: #4b9cff;
+        }
+
+
+        .logo .qd {
+            color: #888;
+        }
+
+
+        /* =========================
+           HOME BUTTON
+        ========================= */
+
+        .home-button {
+            height: 32px;
+
+            padding: 0 13px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #202526;
+
+            border: 1px solid #303637;
+            border-radius: 4px;
+
+            color: #aaa;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition: 0.12s;
+        }
+
+
+        .home-button:hover {
+            background: #292e30;
+            color: #ddd;
+        }
+
+
+        /* =========================
+           MAIN PAGE
+        ========================= */
+
+        main {
+            width: 66.6667%;
+            max-width: 950px;
+
+            margin: 35px auto 60px;
+        }
+
+
+        /* =========================
+           DOCUMENT INFORMATION
+        ========================= */
+
+        .document-info {
+            margin-bottom: 18px;
+        }
+
+
+        .document-title {
+            margin: 0 0 7px;
+
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+
+        .document-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            color: #777;
+
+            font-size: 13px;
+        }
+
+
+        .meta-separator {
+            color: #444;
+        }
+
+
+        .read-only {
+            color: #4b9cff;
+        }
+
+
+        /* =========================
+           VIEWER
+        ========================= */
+
+        .viewer-shell {
+            position: relative;
+
+            background: #141819;
+
+            border: 1px solid #282d2f;
+            border-radius: 7px;
+
+            overflow: hidden;
+        }
+
+
+        .viewer {
+            padding: 22px;
+
+            min-height: 500px;
+        }
+
+
+        /* =========================
+           VIEWER TOOLBAR
+        ========================= */
+
+        .viewer-toolbar {
+            min-height: 48px;
+
+            padding: 0 14px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 12px;
+
+            background: #111415;
+
+            border-bottom: 1px solid #282d2f;
+        }
+
+
+        .viewer-type {
+            color: #777;
+
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+
+        .viewer-actions {
+            display: flex;
+            align-items: center;
+
+            gap: 7px;
+        }
+
+
+        .viewer-button {
+            height: 28px;
+
+            padding: 0 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #202526;
+
+            border: 1px solid #303637;
+            border-radius: 4px;
+
+            color: #aaa;
+
+            font-size: 10px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.12s;
+        }
+
+
+        .viewer-button:hover {
+            background: #292e30;
+            color: #ddd;
+        }
+
+
+        /* =========================
+           DOCUMENT MODE
+        ========================= */
+
+        .document-view {
+            width: 100%;
+        }
+
+
+        .document-page {
+            width: min(100%, 760px);
+
+            margin: 0 auto;
+
+            padding: 70px 75px;
+
+            background: #f5f5f5;
+
+            color: #202020;
+
+            border-radius: 2px;
+
+            box-shadow:
+                0 2px 12px rgba(0, 0, 0, 0.25);
+
+            overflow-wrap: anywhere;
+        }
+
+
+        .document-content {
+            color: #303030;
+
+            font-size: 15px;
+
+            line-height: 1.7;
+        }
+
+
+        .document-content h1 {
+            margin: 0 0 18px;
+
+            color: #171717;
+
+            font-size: 30px;
+            line-height: 1.25;
+        }
+
+
+        .document-content h2 {
+            margin: 32px 0 10px;
+
+            color: #202020;
+
+            font-size: 21px;
+            line-height: 1.3;
+        }
+
+
+        .document-content h3 {
+            margin: 25px 0 9px;
+
+            color: #202020;
+
+            font-size: 17px;
+        }
+
+
+        .document-content p {
+            margin: 0 0 16px;
+        }
+
+
+        .document-content ul,
+        .document-content ol {
+            margin: 0 0 18px;
+
+            padding-left: 25px;
+        }
+
+
+        .document-content li {
+            margin-bottom: 5px;
+        }
+
+
+        .document-content img {
+            max-width: 100%;
+            height: auto;
+
+            display: block;
+
+            margin: 20px auto;
+        }
+
+
+        .document-content table {
+            width: 100%;
+
+            margin: 20px 0;
+
+            border-collapse: collapse;
+
+            font-size: 14px;
+        }
+
+
+        .document-content th,
+        .document-content td {
+            padding: 8px 10px;
+
+            border: 1px solid #ccc;
+
+            text-align: left;
+        }
+
+
+        .document-content th {
+            background: #e9e9e9;
+        }
+
+
+        .document-content a {
+            color: #286dc0;
+        }
+
+
+        .document-content hr {
+            margin: 30px 0;
+
+            border: 0;
+
+            border-top: 1px solid #ddd;
+        }
+
+
+        /* =========================
+           SLIDES MODE
+        ========================= */
+
+        .slides-view {
+            display: none;
+
+            width: 100%;
+
+            min-height: 600px;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+
+        .slide-stage {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+
+        .slide {
+            width: min(100%, 900px);
+
+            aspect-ratio: 16 / 9;
+
+            padding: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #f5f5f5;
+
+            color: #202020;
+
+            border-radius: 2px;
+
+            box-shadow:
+                0 2px 12px rgba(0, 0, 0, 0.3);
+
+            overflow: hidden;
+        }
+
+
+        .slide-content {
+            width: 100%;
+            max-height: 100%;
+
+            overflow: auto;
+
+            color: #202020;
+
+            font-size: 18px;
+            line-height: 1.5;
+
+            overflow-wrap: anywhere;
+        }
+
+
+        .slide-content h1 {
+            margin-top: 0;
+
+            font-size: 34px;
+        }
+
+
+        .slide-content h2 {
+            font-size: 25px;
+        }
+
+
+        .slide-content img {
+            max-width: 100%;
+            max-height: 70vh;
+        }
+
+
+        .slide-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 12px;
+        }
+
+
+        .slide-counter {
+            min-width: 70px;
+
+            text-align: center;
+
+            color: #777;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           PDF MODE
+        ========================= */
+
+        .pdf-view {
+            display: none;
+
+            width: 100%;
+        }
+
+
+        .pdf-page {
+            width: min(100%, 760px);
+
+            min-height: 900px;
+
+            margin: 0 auto 18px;
+
+            padding: 60px;
+
+            background: #f5f5f5;
+
+            color: #202020;
+
+            border-radius: 2px;
+
+            box-shadow:
+                0 2px 12px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* =========================
+           LOADING
+        ========================= */
+
+        .loading {
+            min-height: 450px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #777;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           ERROR
+        ========================= */
+
+        .error {
+            display: none;
+
+            padding: 45px 25px;
+
+            text-align: center;
+
+            background: #141819;
+
+            border: 1px solid #282d2f;
+            border-radius: 7px;
+        }
+
+
+        .error-title {
+            margin: 0 0 8px;
+
+            color: #ff4545;
+
+            font-size: 18px;
+        }
+
+
+        .error-message {
+            margin: 0;
+
+            color: #777;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .document-footer {
+            width: min(100%, 950px);
+
+            margin: 13px auto 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            color: #666;
+
+            font-size: 11px;
+        }
+
+
+        .document-status {
+            display: flex;
+            align-items: center;
+
+            gap: 6px;
+        }
+
+
+        .document-status-dot {
+            color: #4b9cff;
+
+            font-size: 10px;
+        }
+
+
+        .document-id {
+            color: #4d5152;
+        }
+
+
+        /* =========================
+           VIEWER MODE
+           "FULLSCREEN" WITHOUT
+           BROWSER FULLSCREEN API
+        ========================= */
+
+        body.viewer-mode {
+            overflow: hidden;
+        }
+
+
+        body.viewer-mode header {
+            display: none;
+        }
+
+
+        body.viewer-mode main {
+            width: 100%;
+            max-width: none;
+
+            margin: 0;
+
+            height: 100vh;
+        }
+
+
+        body.viewer-mode .document-info {
+            display: none !important;
+        }
+
+
+        body.viewer-mode .viewer-shell {
+            height: 100vh;
+
+            border: 0;
+            border-radius: 0;
+        }
+
+
+        body.viewer-mode .viewer {
+            height: calc(100vh - 48px);
+
+            padding: 25px;
+
+            overflow: auto;
+        }
+
+
+        body.viewer-mode .document-page {
+            min-height: calc(100vh - 100px);
+        }
+
+
+        body.viewer-mode .slide {
+            width: min(92vw, 1400px);
+            max-height: calc(100vh - 140px);
+
+            padding: 40px;
+        }
+
+
+        body.viewer-mode .slides-view {
+            min-height: calc(100vh - 100px);
+        }
+
+
+        body.viewer-mode .pdf-page {
+            width: min(92vw, 850px);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            header {
+                padding: 0 18px;
+            }
+
+
+            .logo {
+                font-size: 19px;
+            }
+
+
+            .home-button {
+                height: 30px;
+
+                padding: 0 10px;
+            }
+
+
+            main {
+                width: calc(100% - 30px);
+
+                margin-top: 25px;
+            }
+
+
+            .document-title {
+                font-size: 24px;
+            }
+
+
+            .viewer {
+                padding: 10px;
+            }
+
+
+            .viewer-toolbar {
+                padding: 0 10px;
+            }
+
+
+            .document-page {
+                padding: 45px 28px;
+            }
+
+
+            .document-content {
+                font-size: 14px;
+            }
+
+
+            .document-content h1 {
+                font-size: 25px;
+            }
+
+
+            .document-content h2 {
+                font-size: 18px;
+            }
+
+
+            .slide {
+                padding: 25px;
+            }
+
+
+            .slide-content {
+                font-size: 13px;
+            }
+
+
+            .slide-content h1 {
+                font-size: 23px;
+            }
+
+
+            .slide-content h2 {
+                font-size: 18px;
+            }
+
+
+            .pdf-page {
+                min-height: 650px;
+
+                padding: 35px 25px;
+            }
+
+
+            .document-footer {
+                align-items: flex-start;
+
+                flex-direction: column;
+
+                padding: 0 3px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="logo">
+        what<span class="cheats">cheats</span>are<span class="online">online</span><span class="hw">HW</span><span class="qd">.qd.je</span>
+    </div>
+
+
+    <a
+        class="home-button"
+        href="https://whatcheatsareonline.qd.je/"
+    >
+        HOME
+    </a>
+
+</header>
+
+
+<main>
+
+
+    <!-- =========================
+         DOCUMENT INFORMATION
+    ========================= -->
+
+    <div
+        class="document-info"
+        id="documentInfo"
+        style="display: none;"
+    >
+
+        <h1
+            class="document-title"
+            id="documentTitle"
+        >
+            Shared Homework
+        </h1>
+
+
+        <div class="document-meta">
+
+            <span id="documentType">
+                Document
+            </span>
+
+
+            <span class="meta-separator">
+                ·
+            </span>
+
+
+            <span class="read-only">
+                Read-only
+            </span>
+
+
+            <span
+                class="meta-separator"
+                id="dateSeparator"
+            >
+                ·
+            </span>
+
+
+            <span id="documentDate">
+                Shared recently
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         LOADING
+    ========================= -->
+
+    <div
+        class="viewer-shell"
+        id="loadingViewer"
+    >
+
+        <div class="loading">
+            Loading document...
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DOCUMENT VIEWER
+    ========================= -->
+
+    <div
+        class="viewer-shell"
+        id="viewerShell"
+        style="display: none;"
+    >
+
+
+        <!-- VIEWER TOOLBAR -->
+
+        <div class="viewer-toolbar">
+
+            <div
+                class="viewer-type"
+                id="viewerType"
+            >
+                DOCUMENT
+            </div>
+
+
+            <div class="viewer-actions">
+
+                <button
+                    class="viewer-button"
+                    id="fullscreenButton"
+                    type="button"
+                >
+                    FULLSCREEN
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- VIEWER AREA -->
+
+        <div class="viewer" id="viewer">
+
+
+            <!-- DOCUMENT -->
+
+            <div
+                class="document-view"
+                id="documentView"
+            >
+
+                <article class="document-page">
+
+                    <div
+                        class="document-content"
+                        id="documentContent"
+                    ></div>
+
+                </article>
+
+            </div>
+
+
+            <!-- SLIDES -->
+
+            <div
+                class="slides-view"
+                id="slidesView"
+            >
+
+                <div class="slide-stage">
+
+                    <div class="slide">
+
+                        <div
+                            class="slide-content"
+                            id="slideContent"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="slide-navigation">
+
+                    <button
+                        class="viewer-button"
+                        id="previousSlide"
+                        type="button"
+                    >
+                        ←
+                    </button>
+
+
+                    <div
+                        class="slide-counter"
+                        id="slideCounter"
+                    >
+                        1 / 1
+                    </div>
+
+
+                    <button
+                        class="viewer-button"
+                        id="nextSlide"
+                        type="button"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PDF -->
+
+            <div
+                class="pdf-view"
+                id="pdfView"
+            ></div>
+
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="document-footer">
+
+            <div class="document-status">
+
+                <span class="document-status-dot">
+                    ●
+                </span>
+
+                <span>
+                    Read-only copy · Original document is not modified
+                </span>
+
+            </div>
+
+
+            <div
+                class="document-id"
+                id="documentId"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         ERROR
+    ========================= -->
+
+    <div
+        class="error"
+        id="errorBox"
+    >
+
+        <h2 class="error-title">
+            Document unavailable
+        </h2>
+
+
+        <p
+            class="error-message"
+            id="errorMessage"
+        >
+            This document could not be loaded.
+        </p>
+
+    </div>
+
+</main>
+
+
+<script>
+
+    /* =========================
+       ROUTE / SHARE ID
+       =========================
+
+       Expected URL:
+
+       /sharing/321321
+
+       Vercel rewrites this route to
+       this page, and this code extracts
+       the six-digit assignment ID.
+    */
+
+
+    function getShareId() {
+
+        const path =
+            window.location.pathname
+                .replace(/\/+$/, "");
+
+
+        const parts =
+            path.split("/");
+
+
+        /*
+            Expected:
+
+            ["", "sharing", "321321"]
+        */
+
+
+        if (
+            parts.length >= 3 &&
+            parts[1].toLowerCase() === "sharing"
+        ) {
+
+            return parts[2];
+
+        }
+
+
+        /*
+            Development fallback:
+
+            /share.html?id=321321
+        */
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+
+        return params.get("id");
+
+    }
+
+
+    const shareId =
+        getShareId();
+
+
+    /* =========================
+       ELEMENTS
+    ========================= */
+
+    const loadingViewer =
+        document.getElementById(
+            "loadingViewer"
+        );
+
+
+    const viewerShell =
+        document.getElementById(
+            "viewerShell"
+        );
+
+
+    const documentInfo =
+        document.getElementById(
+            "documentInfo"
+        );
+
+
+    const documentTitle =
+        document.getElementById(
+            "documentTitle"
+        );
+
+
+    const documentType =
+        document.getElementById(
+            "documentType"
+        );
+
+
+    const documentDate =
+        document.getElementById(
+            "documentDate"
+        );
+
+
+    const dateSeparator =
+        document.getElementById(
+            "dateSeparator"
+        );
+
+
+    const viewerType =
+        document.getElementById(
+            "viewerType"
+        );
+
+
+    const documentView =
+        document.getElementById(
+            "documentView"
+        );
+
+
+    const documentContent =
+        document.getElementById(
+            "documentContent"
+        );
+
+
+    const slidesView =
+        document.getElementById(
+            "slidesView"
+        );
+
+
+    const slideContent =
+        document.getElementById(
+            "slideContent"
+        );
+
+
+    const slideCounter =
+        document.getElementById(
+            "slideCounter"
+        );
+
+
+    const previousSlide =
+        document.getElementById(
+            "previousSlide"
+        );
+
+
+    const nextSlide =
+        document.getElementById(
+            "nextSlide"
+        );
+
+
+    const pdfView =
+        document.getElementById(
+            "pdfView"
+        );
+
+
+    const documentId =
+        document.getElementById(
+            "documentId"
+        );
+
+
+    const errorBox =
+        document.getElementById(
+            "errorBox"
+        );
+
+
+    const errorMessage =
+        document.getElementById(
+            "errorMessage"
+        );
+
+
+    const fullscreenButton =
+        document.getElementById(
+            "fullscreenButton"
+        );
+
+
+    /* =========================
+       CURRENT SLIDE
+    ========================= */
+
+    let slides = [];
+
+    let currentSlide = 0;
+
+
+    /* =========================
+       ERROR
+    ========================= */
+
+    function showError(message) {
+
+        loadingViewer.style.display =
+            "none";
+
+
+        viewerShell.style.display =
+            "none";
+
+
+        documentInfo.style.display =
+            "none";
+
+
+        errorMessage.textContent =
+            message;
+
+
+        errorBox.style.display =
+            "block";
+
+    }
+
+
+    /* =========================
+       DATE
+    ========================= */
+
+    function formatDate(value) {
+
+        if (!value) {
+            return "";
+        }
+
+
+        const date =
+            new Date(value);
+
+
+        if (
+            Number.isNaN(
+                date.getTime()
+            )
+        ) {
+
+            return value;
+
+        }
+
+
+        return date.toLocaleDateString(
+            undefined,
+            {
+                year: "numeric",
+                month: "short",
+                day: "numeric"
+            }
+        );
+
+    }
+
+
+    /* =========================
+       VIEWER MODE
+    ========================= */
+
+    function enterViewerMode() {
+
+        document.body.classList.add(
+            "viewer-mode"
+        );
+
+
+        fullscreenButton.textContent =
+            "EXIT";
+
+    }
+
+
+    function exitViewerMode() {
+
+        document.body.classList.remove(
+            "viewer-mode"
+        );
+
+
+        fullscreenButton.textContent =
+            "FULLSCREEN";
+
+    }
+
+
+    fullscreenButton.addEventListener(
+        "click",
+        function () {
+
+            if (
+                document.body.classList.contains(
+                    "viewer-mode"
+                )
+            ) {
+
+                exitViewerMode();
+
+            } else {
+
+                enterViewerMode();
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       ESCAPE
+    ========================= */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                document.body.classList.contains(
+                    "viewer-mode"
+                )
+            ) {
+
+                exitViewerMode();
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       VIEWER TYPE
+    ========================= */
+
+    function normalizeViewerType(documentData) {
+
+        if (
+            documentData.viewer
+        ) {
+
+            return documentData.viewer
+                .toLowerCase();
+
+        }
+
+
+        const type =
+            (
+                documentData.type ||
+                ""
+            ).toLowerCase();
+
+
+        if (
+            type.includes("slide") ||
+            type.includes("presentation") ||
+            type.includes("powerpoint")
+        ) {
+
+            return "slides";
+
+        }
+
+
+        if (
+            type.includes("pdf")
+        ) {
+
+            return "pdf";
+
+        }
+
+
+        return "document";
+
+    }
+
+
+    /* =========================
+       HIDE ALL VIEWERS
+    ========================= */
+
+    function hideViewerTypes() {
+
+        documentView.style.display =
+            "none";
+
+
+        slidesView.style.display =
+            "none";
+
+
+        pdfView.style.display =
+            "none";
+
+    }
+
+
+    /* =========================
+       DOCUMENT RENDERING
+    ========================= */
+
+    function renderDocument(content) {
+
+        documentView.style.display =
+            "block";
+
+
+        if (!content) {
+
+            documentContent.textContent =
+                "This document contains no displayable content.";
+
+            return;
+
+        }
+
+
+        if (
+            typeof content === "object" &&
+            typeof content.html === "string"
+        ) {
+
+            /*
+                IMPORTANT:
+
+                The backend should sanitize imported
+                HTML before sending it here.
+            */
+
+            documentContent.innerHTML =
+                content.html;
+
+            return;
+
+        }
+
+
+        if (
+            typeof content === "object" &&
+            typeof content.text === "string"
+        ) {
+
+            documentContent.textContent =
+                content.text;
+
+            return;
+
+        }
+
+
+        if (
+            typeof content === "string"
+        ) {
+
+            documentContent.textContent =
+                content;
+
+            return;
+
+        }
+
+
+        documentContent.textContent =
+            "This document could not be displayed.";
+
+    }
+
+
+    /* =========================
+       SLIDES RENDERING
+    ========================= */
+
+    function renderSlides(slideList) {
+
+        if (
+            !Array.isArray(slideList) ||
+            slideList.length === 0
+        ) {
+
+            slideContent.textContent =
+                "This presentation contains no displayable slides.";
+
+            slideCounter.textContent =
+                "0 / 0";
+
+            return;
+
+        }
+
+
+        slides =
+            slideList;
+
+
+        currentSlide =
+            0;
+
+
+        updateSlide();
+
+    }
+
+
+    function updateSlide() {
+
+        if (
+            slides.length === 0
+        ) {
+
+            return;
+
+        }
+
+
+        const slide =
+            slides[currentSlide];
+
+
+        /*
+            A slide can provide:
+
+            {
+                html: "<h1>...</h1>"
+            }
+
+            or:
+
+            {
+                text: "..."
+            }
+        */
+
+
+        if (
+            slide &&
+            typeof slide.html === "string"
+        ) {
+
+            slideContent.innerHTML =
+                slide.html;
+
+        } else if (
+            slide &&
+            typeof slide.text === "string"
+        ) {
+
+            slideContent.textContent =
+                slide.text;
+
+        } else if (
+            typeof slide === "string"
+        ) {
+
+            slideContent.textContent =
+                slide;
+
+        } else {
+
+            slideContent.textContent =
+                "This slide could not be displayed.";
+
+        }
+
+
+        slideCounter.textContent =
+            `${currentSlide + 1} / ${slides.length}`;
+
+
+        previousSlide.disabled =
+            currentSlide === 0;
+
+
+        nextSlide.disabled =
+            currentSlide === slides.length - 1;
+
+    }
+
+
+    function goToPreviousSlide() {
+
+        if (
+            currentSlide <= 0
+        ) {
+
+            return;
+
+        }
+
+
+        currentSlide--;
+
+        updateSlide();
+
+    }
+
+
+    function goToNextSlide() {
+
+        if (
+            currentSlide >= slides.length - 1
+        ) {
+
+            return;
+
+        }
+
+
+        currentSlide++;
+
+        updateSlide();
+
+    }
+
+
+    previousSlide.addEventListener(
+        "click",
+        goToPreviousSlide
+    );
+
+
+    nextSlide.addEventListener(
+        "click",
+        goToNextSlide
+    );
+
+
+    /* =========================
+       SLIDE KEYBOARD NAVIGATION
+    ========================= */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                slidesView.style.display !== "flex"
+            ) {
+
+                return;
+
+            }
+
+
+            /*
+                Don't hijack arrow keys when
+                the user is typing in a field.
+            */
+
+            const tag =
+                document.activeElement?.tagName;
+
+
+            if (
+                tag === "INPUT" ||
+                tag === "TEXTAREA"
+            ) {
+
+                return;
+
+            }
+
+
+            if (
+                event.key === "ArrowLeft"
+            ) {
+
+                event.preventDefault();
+
+                goToPreviousSlide();
+
+            }
+
+
+            if (
+                event.key === "ArrowRight"
+            ) {
+
+                event.preventDefault();
+
+                goToNextSlide();
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       PDF RENDERING
+    ========================= */
+
+    function renderPDF(pages) {
+
+        if (
+            !Array.isArray(pages) ||
+            pages.length === 0
+        ) {
+
+            pdfView.textContent =
+                "This PDF contains no displayable pages.";
+
+            return;
+
+        }
+
+
+        pdfView.innerHTML = "";
+
+
+        pages.forEach(
+            function (page) {
+
+                const pageElement =
+                    document.createElement(
+                        "article"
+                    );
+
+
+                pageElement.className =
+                    "pdf-page";
+
+
+                if (
+                    page &&
+                    typeof page.html === "string"
+                ) {
+
+                    pageElement.innerHTML =
+                        page.html;
+
+                } else if (
+                    page &&
+                    typeof page.text === "string"
+                ) {
+
+                    pageElement.textContent =
+                        page.text;
+
+                } else if (
+                    typeof page === "string"
+                ) {
+
+                    pageElement.textContent =
+                        page;
+
+                } else {
+
+                    pageElement.textContent =
+                        "This page could not be displayed.";
+
+                }
+
+
+                pdfView.appendChild(
+                    pageElement
+                );
+
+            }
+        );
+
+    }
+
+
+    /* =========================
+       RENDER API DOCUMENT
+    ========================= */
+
+    function renderDocumentData(documentData) {
+
+        if (!documentData) {
+
+            throw new Error(
+                "The API returned no document."
+            );
+
+        }
+
+
+        const title =
+            documentData.title ||
+            "Shared Homework";
+
+
+        const type =
+            documentData.type ||
+            "Document";
+
+
+        const viewer =
+            normalizeViewerType(
+                documentData
+            );
+
+
+        documentTitle.textContent =
+            title;
+
+
+        documentType.textContent =
+            type;
+
+
+        if (
+            documentData.createdAt
+        ) {
+
+            documentDate.textContent =
+                "Shared " +
+                formatDate(
+                    documentData.createdAt
+                );
+
+        } else {
+
+            documentDate.style.display =
+                "none";
+
+            dateSeparator.style.display =
+                "none";
+
+        }
+
+
+        documentId.textContent =
+            documentData.id
+                ? "Share ID: " +
+                  documentData.id
+                : "";
+
+
+        viewerType.textContent =
+            viewer.toUpperCase();
+
+
+        hideViewerTypes();
+
+
+        /*
+            DOCUMENT
+        */
+
+        if (
+            viewer === "document"
+        ) {
+
+            renderDocument(
+                documentData.content
+            );
+
+        }
+
+
+        /*
+            SLIDES
+        */
+
+        else if (
+            viewer === "slides"
+        ) {
+
+            slidesView.style.display =
+                "flex";
+
+
+            renderSlides(
+                documentData.slides ||
+                documentData.pages ||
+                []
+            );
+
+        }
+
+
+        /*
+            PDF
+        */
+
+        else if (
+            viewer === "pdf"
+        ) {
+
+            pdfView.style.display =
+                "block";
+
+
+            renderPDF(
+                documentData.pages ||
+                []
+            );
+
+        }
+
+
+        /*
+            UNKNOWN
+        */
+
+        else {
+
+            renderDocument(
+                documentData.content
+            );
+
+        }
+
+
+        document.title =
+            title +
+            " — whatcheatsareonlineHW.qd.je";
+
+
+        loadingViewer.style.display =
+            "none";
+
+
+        errorBox.style.display =
+            "none";
+
+
+        documentInfo.style.display =
+            "block";
+
+
+        viewerShell.style.display =
+            "block";
+
+    }
+
+
+    /* =========================
+       LOAD DOCUMENT
+    ========================= */
+
+    async function loadDocument() {
+
+        if (!shareId) {
+
+            showError(
+                "No assignment ID was provided."
+            );
+
+            return;
+
+        }
+
+
+        /*
+            Optional sanity check.
+
+            Your assignment links use
+            six-digit IDs such as:
+
+            /sharing/321321
+        */
+
+        if (
+            !/^\d{6}$/.test(
+                shareId
+            )
+        ) {
+
+            showError(
+                "The assignment link is invalid."
+            );
+
+            return;
+
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    "/api/document?id=" +
+                    encodeURIComponent(
+                        shareId
+                    ),
+                    {
+                        method: "GET",
+
+                        headers: {
+                            "Accept":
+                                "application/json"
+                        }
+                    }
+                );
+
+
+            let data;
+
+
+            try {
+
+                data =
+                    await response.json();
+
+            } catch {
+
+                throw new Error(
+                    "The document API returned an invalid response."
+                );
+
+            }
+
+
+            if (!response.ok) {
+
+                throw new Error(
+                    data?.error ||
+                    "The assignment could not be loaded."
+                );
+
+            }
+
+
+            if (
+                data?.success === false
+            ) {
+
+                throw new Error(
+                    data.error ||
+                    "The assignment could not be loaded."
+                );
+
+            }
+
+
+            if (
+                !data?.document
+            ) {
+
+                throw new Error(
+                    "The document API did not return an assignment."
+                );
+
+            }
+
+
+            renderDocumentData(
+                data.document
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "Assignment loading error:",
+                error
+            );
+
+
+            showError(
+                error.message ||
+                "Something went wrong while loading this assignment."
+            );
+
+        }
+
+    }
+
+
+    /* =========================
+       START
+    ========================= */
+
+    loadDocument();
+
+</script>
+
+</body>
+</html>
+```
