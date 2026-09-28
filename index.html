@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>whatcheatsareonlineHW.qd.je</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #0c0e0f;
+            color: #e8e8e8;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 32px;
+
+            background: #111415;
+            border-bottom: 1px solid #242829;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.6px;
+        }
+
+        .logo .what {
+            color: #e8e8e8;
+        }
+
+        .logo .cheats {
+            color: #35d16f;
+        }
+
+        .logo .are {
+            color: #e8e8e8;
+        }
+
+        .logo .online {
+            color: #ff4545;
+        }
+
+        .logo .hw {
+            color: #4b9cff;
+        }
+
+        .home-button {
+            height: 32px;
+
+            padding: 0 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #202526;
+            border: 1px solid #303637;
+            border-radius: 4px;
+
+            color: #aaa;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            text-decoration: none;
+
+            transition: 0.12s;
+        }
+
+        .home-button:hover {
+            background: #292e30;
+            color: #ddd;
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        main {
+            width: min(1100px, calc(100% - 40px));
+            margin: 35px auto 60px;
+        }
+
+        .page-title {
+            margin-bottom: 24px;
+        }
+
+        .page-title h1 {
+            margin: 0 0 7px;
+            font-size: 28px;
+        }
+
+        .page-title p {
+            margin: 0;
+            color: #777;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           IMPORT
+        ========================= */
+
+        .import-box {
+            display: flex;
+            width: 100%;
+            height: 44px;
+
+            margin-bottom: 18px;
+        }
+
+        .import-input {
+            flex: 1;
+
+            padding: 0 14px;
+
+            background: #131718;
+            border: 1px solid #292e30;
+            border-right: 0;
+            border-radius: 6px 0 0 6px;
+
+            color: #eee;
+            font-size: 14px;
+
+            outline: none;
+        }
+
+        .import-input:focus {
+            border-color: #3a4244;
+        }
+
+        .import-input::placeholder {
+            color: #666;
+        }
+
+        .import-button {
+            width: 110px;
+
+            background: #202526;
+            border: 1px solid #303637;
+            border-radius: 0 6px 6px 0;
+
+            color: #aaa;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            cursor: pointer;
+            transition: 0.12s;
+        }
+
+        .import-button:hover {
+            background: #292e30;
+            color: #ddd;
+        }
+
+
+        /* =========================
+           HOMEWORK CARDS
+        ========================= */
+
+        .hw-card {
+            position: relative;
+
+            min-height: 145px;
+
+            margin-bottom: 12px;
+            padding: 22px 70px 20px 22px;
+
+            background: #141819;
+
+            border: 1px solid #282d2f;
+            border-radius: 7px;
+
+            overflow: hidden;
+        }
+
+        .hw-wall {
+            position: absolute;
+
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+
+            width: 13px;
+
+            background: #4b9cff;
+        }
+
+
+        /* =========================
+           HOMEWORK NAME
+        ========================= */
+
+        .hw-name {
+            margin: 0;
+
+            font-size: 19px;
+            font-weight: 600;
+        }
+
+        .hw-type {
+            margin-top: 7px;
+
+            color: #777;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RIGHT INFORMATION
+        ========================= */
+
+        .hw-info {
+            position: absolute;
+
+            top: 21px;
+            right: 42px;
+
+            text-align: right;
+        }
+
+        .hw-status {
+            color: #4b9cff;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            letter-spacing: 0.2px;
+        }
+
+        .last-update {
+            margin-top: 7px;
+
+            color: #777;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           BOTTOM AREA
+        ========================= */
+
+        .bottom {
+            position: absolute;
+
+            left: 22px;
+            right: 42px;
+            bottom: 19px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            display: flex;
+            gap: 7px;
+        }
+
+        .buttons a,
+        .buttons button {
+            height: 29px;
+
+            padding: 0 11px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #202526;
+            border: 1px solid #303637;
+            border-radius: 4px;
+
+            color: #aaa;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            text-decoration: none;
+            cursor: pointer;
+
+            transition: 0.12s;
+        }
+
+        .buttons a:hover,
+        .buttons button:hover {
+            background: #292e30;
+            color: #ddd;
+        }
+
+
+        /* =========================
+           DOCUMENT TYPE
+        ========================= */
+
+        .methods {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            color: #888;
+            font-size: 12px;
+        }
+
+        .methods-label {
+            color: #666;
+        }
+
+        .method {
+            color: #aaa;
+        }
+
+
+        /* =========================
+           EMPTY STATE
+        ========================= */
+
+        .empty {
+            padding: 45px 20px;
+
+            text-align: center;
+
+            background: #141819;
+            border: 1px solid #282d2f;
+            border-radius: 7px;
+
+            color: #666;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            header {
+                padding: 0 18px;
+            }
+
+            .logo {
+                font-size: 19px;
+            }
+
+            .hw-card {
+                min-height: 205px;
+                padding-right: 45px;
+            }
+
+            .hw-info {
+                top: 55px;
+                left: 22px;
+                right: auto;
+
+                text-align: left;
+            }
+
+            .bottom {
+                left: 22px;
+                right: 35px;
+                bottom: 18px;
+
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hw-wall {
+                width: 10px;
+            }
+
+            .import-box {
+                height: auto;
+                flex-direction: column;
+                gap: 7px;
+            }
+
+            .import-input {
+                height: 44px;
+
+                border-right: 1px solid #292e30;
+                border-radius: 6px;
+            }
+
+            .import-button {
+                width: 100%;
+                height: 40px;
+
+                border-radius: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span class="what">what</span><span class="cheats">cheats</span><span class="are">are</span><span class="online">online</span><span class="hw">HW</span>.qd.je
+    </div>
+
+    <a
+        class="home-button"
+        href="https://whatcheatsareonline.qd.je/"
+    >
+        HOME
+    </a>
+
+</header>
+
+
+<main>
+
+    <div class="page-title">
+        <h1>Homework</h1>
+        <p>Share homework without giving out direct access to the original file.</p>
+    </div>
+
+
+    <!-- =========================
+         IMPORT
+    ========================== -->
+
+    <div class="import-box">
+
+        <input
+            class="import-input"
+            id="importInput"
+            type="text"
+            placeholder="Paste a Google Docs, Google Slides, or supported file link..."
+            autocomplete="off"
+        >
+
+        <button
+            class="import-button"
+            onclick="importHomework()"
+        >
+            IMPORT
+        </button>
+
+    </div>
+
+
+    <!-- =========================
+         EXAMPLE CARD
+    ========================== -->
+
+    <div class="hw-card">
+
+        <div class="hw-wall"></div>
+
+        <h2 class="hw-name">
+            Example Homework
+        </h2>
+
+        <div class="hw-type">
+            Google Docs
+        </div>
+
+
+        <div class="hw-info">
+
+            <div class="hw-status">
+                ● SHARED
+            </div>
+
+            <div class="last-update">
+                Added: Placeholder
+            </div>
+
+        </div>
+
+
+        <div class="bottom">
+
+            <div class="buttons">
+
+                <button onclick="openHomework(this)">
+                    OPEN
+                </button>
+
+                <button onclick="copyLink(this)">
+                    COPY LINK
+                </button>
+
+            </div>
+
+
+            <div class="methods">
+
+                <span class="methods-label">
+                    Access:
+                </span>
+
+                <span class="method">
+                    Read-only
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         EMPTY STATE
+    ========================== -->
+
+    <div
+        class="empty"
+        id="emptyState"
+        style="display: none;"
+    >
+        No shared homework found.
+    </div>
+
+</main>
+
+
+<script>
+
+    function importHomework() {
+
+        const input =
+            document.getElementById("importInput");
+
+        const value =
+            input.value.trim();
+
+        if (!value) {
+
+            alert("Paste a document link first.");
+            return;
+
+        }
+
+        alert("Import functionality will be connected later.");
+
+    }
+
+
+    function openHomework(button) {
+
+        alert("The homework viewer will go here.");
+
+    }
+
+
+    function copyLink(button) {
+
+        alert("Share-link generation will go here.");
+
+    }
+
+</script>
+
+</body>
+</html>
